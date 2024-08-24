@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+        
+</head>
+<style>
+
+@font-face {
+    font-family: 'ROG Font'; 
+    src: url('fonts/7032-fontps.ttf') format('truetype'); 
+}
+
+
+input {
+    border-radius: 20%; 
+    height:30px;
+    width: 200px;
+    border: solid 5px;
+    border-end-start-radius: 50%;
+    border-start-end-radius: 50%; 
+    border-color: white;
+    background-color: black;
+    color: red;
+    font-size:large;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+input:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+h1 {
+    font-family:"ROG Font";
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+}
+
+h2{
+    font-family:'ROG Font';
+    text-align: center;
+    color: white;
+}
+footer {
+    color: white;
+    position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   display: flex;
+  flex-direction: row; 
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 1000px) {
+  .row {
+    flex-direction: column;
+    width: 75%;
+  }
+}
+
+.box1{
+  height: 150px;
+  /* width: 150px; */
+  border: var(--background-col);
+  flex: 50%;
+  order: 1;
+  padding:150px;
+  display: block;
+  margin-left: 15%; 
+   margin-right: 5%; 
+  border-color: black;
+  margin-top: 200px;
+  margin-bottom: auto;
+  border-radius: 5em;
+  background-color: var(--background-col);
+  color: var(--background-col); 
+  background: rgb(1,143,166);
+  background: radial-gradient(circle, rgb(224, 219, 219) 0%, rgb(0, 0, 0) 100%);
+  opacity: 80%;
+}
+
+.box2{
+height: 50px;
+border: var(--background-col);
+flex: 33.33%;
+order: 2;
+padding:80px;
+display: block;
+margin-left: auto; 
+ margin-right: auto; 
+width: 80%;
+margin-top: auto;
+margin-bottom: auto;
+border-radius: 5em;
+background-color: var(--background-col);
+color: var(--background-col); 
+background: rgb(63,94,251);
+background: radial-gradient(circle, rgb(212, 17, 17) 0%, rgb(0, 0, 0) 100%);
+opacity: 80%;
+}
+
+.box3{
+height: 150px; 
+/* width: 150px; */
+border: var(--background-col);
+flex: 50%;
+order: 2;
+padding:150px;
+display: block;
+ margin-left: 5%; 
+ margin-right: 15%; 
+margin-top: 200px;
+margin-bottom: auto;
+border-radius: 5em;
+border-color: black;;
+background-color: var(--background-col);
+color: var(--background-col); 
+background: rgb(1,143,166);
+background: radial-gradient(circle, rgb(224, 219, 219) 0%, rgb(0, 0, 0) 100%);
+  opacity: 80%;
+}
+
+
+.teacher{
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1000px) {
+  .box1,.box2,.box3 {
+    height: 50%;
+    width: 50%;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+.teacher{
+  height: 175px;
+  width: 175px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+@media (max-width: 800px) {
+    .box1,.box2,.box3 {
+    
+    width: 25%;
+    height: 25%;
+    margin-bottom: 2px;
+    margin-left: 0%;
+  }
+  .teacher{
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+}
+
+@media (max-width: 400px) {
+    .box1,.box2,.box3 {
+    
+    width: 20%;
+    height: 20%;
+    margin-bottom: 2px;
+    margin-left: 0%;
+  }
+  .teacher{
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+}
+
+@media (max-width: 200px) {
+    .box1,.box2,.box3 {
+    
+    width: 10%;
+    height: 10%;
+    margin-bottom: 2px;
+    margin-left: 0%;
+  }
+  .teacher{
+    height: 75px;
+    width: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+}
+
+.box1:hover{
+    transform: scale(1.05);
+    
+    -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  transition: 0.5s;
+}
+
+.box2:hover{
+    -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  transition: 0.5s;
+  transform: scale(1.05);
+}
+
+.box3:hover{
+    transform:  scale(1.05);
+    -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+  transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+  .box1:hover,.box2:hover,.box3:hover {
+    
+    transform: scale(1.05);
+  }
+}
+.box1:not(:hover),.box2:not(:hover),.box3:not(:hover){
+    transition: 0.5s;
+}
+div{
+  height: 200px;
+  width: 200px;
+}
+
+body{
+    background-color: rgba(0,0,0,0.3);
+    background-image:url("mainmain.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-size:cover; */
+}
+img{
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+    margin-right: auto;
+    margin-left:auto;
+    margin-top: 0%;
+    
+}
+
+@media (max-width: 1000px ) {
+  img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
+    margin-left:auto;
+  }
+}
+.box{
+    height: 135px;
+    width: 1500px;
+    min-width: 100px;
+    max-width: 1500px;
+    background-color: white;
+    border-color: var(--background-col);
+    border-radius: 2em;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgb(176, 139, 240) 0%, rgba(252,70,107,1) 100%);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition: 1s;
+}
+.box:hover{
+  transform: scale(1.05);
+  transition: 1s;
+    
+}
+.box.box1:not(:hover){
+  transition: 1s;
+}
+
+@media (max-width: 1000px) {
+  .box {
+    width: 200px;
+    height: 200px;
+    margin-right: auto;
+    margin-left:auto;
+  }
+}
+.social{
+  display: flex;
+  flex-direction: row;
+    margin-right: 10px;
+}
+
+@media (max-width: 1000px) {
+  .social {
+    justify-content: space-between;
+    
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    
+    font-size: 100%;
+  }
+}
+
+p {
+    margin: 5px;
+    height: 200px;
+    font-size: larger;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto ;
+    display: block;
+}
+
+header h1 {
+  font-size: 40px;
+  color: rgba(255, 255, 255);
+}
+
+header h2{
+  color: rgb(0, 0, 0);
+}
+
+</style>
+
+
+
+<body>
+    <header>
+        <h1>Welcome To VXL</h1>
+        <h2>VXL Translates to V Excel</h2>  
+    </header>
+    <div class="row" style="width:100%;height: auto;"> 
+    <div class="box1"> 
+    <img class="teacher" src="teachericon.png">
+    <h1>Teacher</h1>
+    </div>
+    <div class="box3"> 
+    <img class="teacher" src="studenticon.png">
+    <h1>Student</h1> 
+</div>
+<footer>
+    <p>Copyright &copy; 2021 VXL</p>
+    <p>Designed by Access Denied</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+footer {
+    border-top: 1px solid #0A0A0A;
+    color: #0A0A0A;
+    background-color: #FEFEFE;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h3 {
+    color: #5A5A5A;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0.1em 0 0.5em 0;
+}
+
+p {
+    margin: 0.3em;
+    font-size: 1rem;
+}
+
+.left-footer {
+    display: flex;
+    font-size: 0.8em;
+    padding: 0 0.5em 0 0.5em;
+    margin: 2em 3em 2em 1em;
+    gap: 50%;
+}
+
+.left-footer-element {
+    min-width: 15.5em;
+    flex-basis: 49%;
+}
+
+.right-footer {
+    width: 20vmin;
+    height: 15vmin;
+    padding: 0.5em;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0.1em;
+}
